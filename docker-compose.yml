@@ -1,0 +1,17 @@
+version: "2"
+services:
+    webserver:
+        image: buildok/nginx
+        ports:
+            - "8080:80"
+        volumes:
+            - ./nginx/etc_nginx:/etc/nginx
+        links:
+            - webapp:backend_php
+    webapp:
+        image: buildok/fpm
+        ports:
+            - "9000"
+        volumes:
+            - ./code:/backend_php/code
+            - ./fpm/fpm_conf:/etc/php/7.0/fpm
