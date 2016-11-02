@@ -13,5 +13,5 @@ services:
         ports:
             - "9000"
         volumes:
-            - ./code:/backend_php/code
+            - /var/www/html/php:/backend_php/code
             - ./fpm/fpm_conf:/etc/php/7.0/fpm
