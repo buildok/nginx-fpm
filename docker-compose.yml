@@ -13,5 +13,5 @@ services:
         ports:
             - "9000"
         volumes:
-            - /var/www/html/php:/backend_php/code
+            - ~/projects/softswiss:/backend_php
             - ./fpm/config:/etc/php/7.0/fpm/pool.d
