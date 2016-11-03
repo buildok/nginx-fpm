@@ -8,8 +8,6 @@ cd /unixODBC-2.3.1/
 # sudo -i export CPPFLAGS="-DSIZEOF_LONG_INT=8"
 apt-get -y install g++-5
 echo "Configuring the unixODBC 2.3.1 Driver Manager"
-# cp /odbc.conf /etc/ld.so.conf.d/odbc.conf
-# ldconfig
 ./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --disable-gui --disable-drivers --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE 1> odbc_con.log 2> make_err.log
 echo "Building and Installing the unixODBC 2.3.1 Driver Manager"
 make 1> make_std.log 2> make_err.log

@@ -5,7 +5,7 @@ services:
         ports:
             - "8080:80"
         volumes:
-            - ./nginx/etc_nginx:/etc/nginx
+            - ./nginx/config:/etc/nginx
         links:
             - webapp:backend_php
     webapp:
@@ -14,4 +14,4 @@ services:
             - "9000"
         volumes:
             - /var/www/html/php:/backend_php/code
-            # - ./fpm/fpm_conf:/etc/php/7.0/fpm
+            - ./fpm/config:/etc/php/7.0/fpm/pool.d

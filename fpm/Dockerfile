@@ -18,7 +18,6 @@ RUN apt-get update \
     &&  sh /installodbc_ubuntu.sh \
     &&  apt-get -y install php php-fpm
 
-COPY ./fpm_conf/pool.d/www.conf /etc/php/7.0/fpm/pool.d/
 COPY ./files/php_pdo_sqlsrv_7_nts.so /usr/lib/php/20151012/
 COPY ./files/msobdc.ini /etc/php/7.0/mods-available
 
