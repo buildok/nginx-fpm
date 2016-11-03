@@ -14,4 +14,4 @@ services:
             - "9000"
         volumes:
             - /var/www/html/php:/backend_php/code
-            - ./fpm/fpm_conf:/etc/php/7.0/fpm
+            # - ./fpm/fpm_conf:/etc/php/7.0/fpm
