@@ -1,6 +1,6 @@
 # NGINX-FPM
 
-Example compose docker containers with NGINX and PHP FastCgi with unixODBC Driver Manager
+Example of composing docker containers with NGINX and PHP FastCgi with unixODBC Driver Manager
 
 # Build images
 ``` bash
