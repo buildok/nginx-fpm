@@ -16,7 +16,7 @@ RUN apt-get update \
     &&  apt-get -y install curl make libgss-dev \
     &&  dpkg -i /apt-transport-https_1.2.12-ubuntu16.04.1_amd64.deb \
     &&  sh /installodbc_ubuntu.sh \
-    &&  apt-get -y install php php-fpm
+    &&  apt-get -y install php php-fpm libapache2-mod-php7.0
 
 COPY ./files/php_pdo_sqlsrv_7_nts.so /usr/lib/php/20151012/
 COPY ./files/msobdc.ini /etc/php/7.0/mods-available
